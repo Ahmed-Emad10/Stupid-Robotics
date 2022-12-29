@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<package>
+  <name>summit_xl_sim</name>
+  <version>1.1.3</version>
+  <description>The summit_xl_sim metapackage</description>
+
+  <license>BSD</license>
+
+  <url type="website">http://ros.org/wiki/summit_xl_sim</url>
+  <url type="repository">https://github.com/RobotnikAutomation/summit_xl_sim.git</url>
+  <url type="bugtracker">https://github.com/RobotnikAutomation/summit_xl_sim/issues</url>
+
+
+  <author email="rguzman@robotnik.es">Roberto Guzmán</author>
+  <maintainer email="asoriano@robotnik.es">Angel Soriano</maintainer>
+  <maintainer email="avillena@robotnik.es">Álvaro Villena</maintainer>
+  <maintainer email="dredo@robotnik.es">David Redó</maintainer>
+  <maintainer email="aarnal@robotnik.es">Alejandro Arnal</maintainer>
+  <maintainer email="mbosch@robotnik.es">Marc Bosch</maintainer>
+  <maintainer email="rnavarro@robotnik.es">Román Navarro</maintainer>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <run_depend>summit_xl_gazebo</run_depend>
+  <run_depend>summit_xl_sim_bringup</run_depend>
+
+  <export>
+    <metapackage/>
+  </export>
+</package>

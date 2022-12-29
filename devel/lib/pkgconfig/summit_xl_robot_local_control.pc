@@ -1,0 +1,8 @@
+prefix=/home/ahmemad/Stupid-Robotics/devel
+
+Name: summit_xl_robot_local_control
+Description: Description of summit_xl_robot_local_control
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

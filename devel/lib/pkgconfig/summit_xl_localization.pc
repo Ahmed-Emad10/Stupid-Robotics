@@ -1,0 +1,8 @@
+prefix=/home/ahmemad/Stupid-Robotics/devel
+
+Name: summit_xl_localization
+Description: Description of summit_xl_localization
+Version: 1.1.3
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: robot_localization roscpp tf tf2 tf2_ros message_filters std_msgs std_srvs geometry_msgs nav_msgs sensor_msgs robotnik_msgs mavros_msgs

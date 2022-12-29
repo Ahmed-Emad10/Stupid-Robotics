@@ -1,0 +1,8 @@
+prefix=/home/ahmemad/Stupid-Robotics/devel
+
+Name: robotnik_sensors
+Description: Description of robotnik_sensors
+Version: 1.12.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

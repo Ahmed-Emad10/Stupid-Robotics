@@ -1,0 +1,8 @@
+prefix=/home/ahmemad/Stupid-Robotics/devel
+
+Name: summit_xl_sim_bringup
+Description: Description of summit_xl_sim_bringup
+Version: 1.1.3
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

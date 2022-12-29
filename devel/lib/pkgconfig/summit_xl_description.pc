@@ -1,0 +1,8 @@
+prefix=/home/ahmemad/Stupid-Robotics/devel
+
+Name: summit_xl_description
+Description: Description of summit_xl_description
+Version: 1.1.3
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: urdf xacro
