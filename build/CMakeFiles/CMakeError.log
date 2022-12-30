@@ -1,291 +1,21 @@
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags:  
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags: -c 
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags: --c++ 
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags: --ec++ 
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags:  
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags: -c 
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags: --c++ 
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags: --ec++ 
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags:  
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags: -c 
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags: --c++ 
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags: --ec++ 
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags:  
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags: -c 
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags: --c++ 
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags: --ec++ 
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags:  
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags: -c 
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags: --c++ 
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags: --ec++ 
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags:  
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags: -c 
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags: --c++ 
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags: --ec++ 
-
-The output was:
-No such file or directory
-
-
-Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
-Compiler: CMAKE_CXX_COMPILER-NOTFOUND 
-Build flags: 
-Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
-
-The output was:
-No such file or directory
-
-
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/ahmemad/Stupid-Robotics/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_064aa/fast && /usr/bin/make -f CMakeFiles/cmTC_064aa.dir/build.make CMakeFiles/cmTC_064aa.dir/build
+Run Build Command(s):/usr/bin/make cmTC_b63be/fast && /usr/bin/make -f CMakeFiles/cmTC_b63be.dir/build.make CMakeFiles/cmTC_b63be.dir/build
 make[1]: Entering directory '/home/ahmemad/Stupid-Robotics/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_064aa.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_064aa.dir/src.c.o   -c /home/ahmemad/Stupid-Robotics/build/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_064aa
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_064aa.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_064aa.dir/src.c.o  -o cmTC_064aa 
-/usr/bin/ld: CMakeFiles/cmTC_064aa.dir/src.c.o: in function `main':
+Building C object CMakeFiles/cmTC_b63be.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_b63be.dir/src.c.o   -c /home/ahmemad/Stupid-Robotics/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_b63be
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b63be.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_b63be.dir/src.c.o  -o cmTC_b63be 
+/usr/bin/ld: CMakeFiles/cmTC_b63be.dir/src.c.o: in function `main':
 src.c:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_064aa.dir/build.make:87: cmTC_064aa] Error 1
+make[1]: *** [CMakeFiles/cmTC_b63be.dir/build.make:87: cmTC_b63be] Error 1
 make[1]: Leaving directory '/home/ahmemad/Stupid-Robotics/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_064aa/fast] Error 2
+make: *** [Makefile:121: cmTC_b63be/fast] Error 2
 
 
 Source file was:
@@ -311,18 +41,18 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/ahmemad/Stupid-Robotics/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_ea11a/fast && /usr/bin/make -f CMakeFiles/cmTC_ea11a.dir/build.make CMakeFiles/cmTC_ea11a.dir/build
+Run Build Command(s):/usr/bin/make cmTC_39c99/fast && /usr/bin/make -f CMakeFiles/cmTC_39c99.dir/build.make CMakeFiles/cmTC_39c99.dir/build
 make[1]: Entering directory '/home/ahmemad/Stupid-Robotics/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_ea11a.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_ea11a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_ea11a
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ea11a.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_ea11a.dir/CheckFunctionExists.c.o  -o cmTC_ea11a  -lpthreads 
+Building C object CMakeFiles/cmTC_39c99.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_39c99.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_39c99
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_39c99.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_39c99.dir/CheckFunctionExists.c.o  -o cmTC_39c99  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_ea11a.dir/build.make:87: cmTC_ea11a] Error 1
+make[1]: *** [CMakeFiles/cmTC_39c99.dir/build.make:87: cmTC_39c99] Error 1
 make[1]: Leaving directory '/home/ahmemad/Stupid-Robotics/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_ea11a/fast] Error 2
+make: *** [Makefile:121: cmTC_39c99/fast] Error 2
 
 
 

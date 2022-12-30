@@ -60,6 +60,7 @@ all: summit_xl_common/summit_xl_navigation/all
 all: summit_xl_common/summit_xl_perception/all
 all: summit_xl_common/summit_xl_robot_local_control/all
 all: summit_xl_sim/summit_xl_sim/all
+all: project_reqs/all
 all: summit_xl_sim/summit_xl_sim_bringup/all
 all: summit_xl_common/summit_xl_pad/all
 all: summit_xl_common/summit_xl_localization/all
@@ -81,6 +82,7 @@ preinstall: summit_xl_common/summit_xl_navigation/preinstall
 preinstall: summit_xl_common/summit_xl_perception/preinstall
 preinstall: summit_xl_common/summit_xl_robot_local_control/preinstall
 preinstall: summit_xl_sim/summit_xl_sim/preinstall
+preinstall: project_reqs/preinstall
 preinstall: summit_xl_sim/summit_xl_sim_bringup/preinstall
 preinstall: summit_xl_common/summit_xl_pad/preinstall
 preinstall: summit_xl_common/summit_xl_localization/preinstall
@@ -107,6 +109,7 @@ clean: summit_xl_common/summit_xl_navigation/clean
 clean: summit_xl_common/summit_xl_perception/clean
 clean: summit_xl_common/summit_xl_robot_local_control/clean
 clean: summit_xl_sim/summit_xl_sim/clean
+clean: project_reqs/clean
 clean: summit_xl_sim/summit_xl_sim_bringup/clean
 clean: summit_xl_common/summit_xl_pad/clean
 clean: summit_xl_common/summit_xl_localization/clean
@@ -176,6 +179,24 @@ gtest/googletest/clean: gtest/googletest/CMakeFiles/gtest_main.dir/clean
 gtest/googletest/clean: gtest/googletest/CMakeFiles/gtest.dir/clean
 
 .PHONY : gtest/googletest/clean
+
+#=============================================================================
+# Directory level rules for directory project_reqs
+
+# Recursive "all" directory target.
+project_reqs/all:
+
+.PHONY : project_reqs/all
+
+# Recursive "preinstall" directory target.
+project_reqs/preinstall:
+
+.PHONY : project_reqs/preinstall
+
+# Recursive "clean" directory target.
+project_reqs/clean:
+
+.PHONY : project_reqs/clean
 
 #=============================================================================
 # Directory level rules for directory robotnik_msgs
