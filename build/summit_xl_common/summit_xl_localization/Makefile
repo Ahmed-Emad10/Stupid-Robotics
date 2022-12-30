@@ -56,6 +56,30 @@ CMAKE_BINARY_DIR = /home/ahmemad/Stupid-Robotics/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -78,41 +102,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # Special rule for the target test
 test:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
@@ -123,6 +112,17 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -168,139 +168,49 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
+summit_xl_common/summit_xl_localization/CMakeFiles/amcl_gencfg.dir/rule:
+	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/amcl_gencfg.dir/rule
+.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/amcl_gencfg.dir/rule
 
 # Convenience name for target.
-std_srvs_generate_messages_nodejs: summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
+amcl_gencfg: summit_xl_common/summit_xl_localization/CMakeFiles/amcl_gencfg.dir/rule
 
-.PHONY : std_srvs_generate_messages_nodejs
+.PHONY : amcl_gencfg
 
 # fast build rule for target.
-std_srvs_generate_messages_nodejs/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
-.PHONY : std_srvs_generate_messages_nodejs/fast
+amcl_gencfg/fast:
+	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/amcl_gencfg.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/amcl_gencfg.dir/build
+.PHONY : amcl_gencfg/fast
 
 # Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_eus.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/rule
+.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-std_srvs_generate_messages_eus: summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+mavros_msgs_generate_messages_nodejs: summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/rule
 
-.PHONY : std_srvs_generate_messages_eus
+.PHONY : mavros_msgs_generate_messages_nodejs
 
 # fast build rule for target.
-std_srvs_generate_messages_eus/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_eus.dir/build
-.PHONY : std_srvs_generate_messages_eus/fast
+mavros_msgs_generate_messages_nodejs/fast:
+	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/build
+.PHONY : mavros_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/rule:
+	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/rule
+.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-nav_msgs_generate_messages_nodejs: summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+mavros_msgs_generate_messages_cpp: summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/rule
 
-.PHONY : nav_msgs_generate_messages_nodejs
+.PHONY : mavros_msgs_generate_messages_cpp
 
 # fast build rule for target.
-nav_msgs_generate_messages_nodejs/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
-.PHONY : nav_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_eus: summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
-
-.PHONY : nav_msgs_generate_messages_eus
-
-# fast build rule for target.
-nav_msgs_generate_messages_eus/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_eus.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_eus.dir/build
-.PHONY : nav_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_cpp: summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
-
-.PHONY : std_srvs_generate_messages_cpp
-
-# fast build rule for target.
-std_srvs_generate_messages_cpp/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
-.PHONY : std_srvs_generate_messages_cpp/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_eus.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_eus.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-tf_generate_messages_eus: summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_eus.dir/rule
-
-.PHONY : tf_generate_messages_eus
-
-# fast build rule for target.
-tf_generate_messages_eus/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_eus.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_eus.dir/build
-.PHONY : tf_generate_messages_eus/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_lisp: summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : nav_msgs_generate_messages_lisp
-
-# fast build rule for target.
-nav_msgs_generate_messages_lisp/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
-.PHONY : nav_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-topic_tools_generate_messages_lisp: summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_lisp.dir/rule
-
-.PHONY : topic_tools_generate_messages_lisp
-
-# fast build rule for target.
-topic_tools_generate_messages_lisp/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_lisp.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_lisp.dir/build
-.PHONY : topic_tools_generate_messages_lisp/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_cpp: summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : nav_msgs_generate_messages_cpp
-
-# fast build rule for target.
-nav_msgs_generate_messages_cpp/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
-.PHONY : nav_msgs_generate_messages_cpp/fast
+mavros_msgs_generate_messages_cpp/fast:
+	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/build
+.PHONY : mavros_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 summit_xl_common/summit_xl_localization/CMakeFiles/uuid_msgs_generate_messages_py.dir/rule:
@@ -318,6 +228,21 @@ uuid_msgs_generate_messages_py/fast:
 .PHONY : uuid_msgs_generate_messages_py/fast
 
 # Convenience name for target.
+summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule:
+	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule
+.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+mavros_msgs_generate_messages_lisp: summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : mavros_msgs_generate_messages_lisp
+
+# fast build rule for target.
+mavros_msgs_generate_messages_lisp/fast:
+	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build
+.PHONY : mavros_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
 summit_xl_common/summit_xl_localization/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/rule:
 	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/rule
 .PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/rule
@@ -331,36 +256,6 @@ uuid_msgs_generate_messages_nodejs: summit_xl_common/summit_xl_localization/CMak
 uuid_msgs_generate_messages_nodejs/fast:
 	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/uuid_msgs_generate_messages_nodejs.dir/build
 .PHONY : uuid_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_eus: summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_eus.dir/rule
-
-.PHONY : tf2_msgs_generate_messages_eus
-
-# fast build rule for target.
-tf2_msgs_generate_messages_eus/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_eus.dir/build
-.PHONY : tf2_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-topic_tools_generate_messages_nodejs: summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_nodejs.dir/rule
-
-.PHONY : topic_tools_generate_messages_nodejs
-
-# fast build rule for target.
-topic_tools_generate_messages_nodejs/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_nodejs.dir/build
-.PHONY : topic_tools_generate_messages_nodejs/fast
 
 # Convenience name for target.
 summit_xl_common/summit_xl_localization/CMakeFiles/robot_localization_generate_messages_cpp.dir/rule:
@@ -393,19 +288,19 @@ robot_localization_generate_messages_eus/fast:
 .PHONY : robot_localization_generate_messages_eus/fast
 
 # Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_py.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_py.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_py.dir/rule
+summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_eus.dir/rule:
+	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_eus.dir/rule
+.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-geographic_msgs_generate_messages_py: summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_py.dir/rule
+mavros_msgs_generate_messages_eus: summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_eus.dir/rule
 
-.PHONY : geographic_msgs_generate_messages_py
+.PHONY : mavros_msgs_generate_messages_eus
 
 # fast build rule for target.
-geographic_msgs_generate_messages_py/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_py.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_py.dir/build
-.PHONY : geographic_msgs_generate_messages_py/fast
+mavros_msgs_generate_messages_eus/fast:
+	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_eus.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_eus.dir/build
+.PHONY : mavros_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 summit_xl_common/summit_xl_localization/CMakeFiles/robot_localization_generate_messages_lisp.dir/rule:
@@ -423,21 +318,6 @@ robot_localization_generate_messages_lisp/fast:
 .PHONY : robot_localization_generate_messages_lisp/fast
 
 # Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_lisp: summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : tf2_msgs_generate_messages_lisp
-
-# fast build rule for target.
-tf2_msgs_generate_messages_lisp/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_lisp.dir/build
-.PHONY : tf2_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
 summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_py.dir/rule:
 	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_py.dir/rule
 .PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_py.dir/rule
@@ -451,81 +331,6 @@ mavros_msgs_generate_messages_py: summit_xl_common/summit_xl_localization/CMakeF
 mavros_msgs_generate_messages_py/fast:
 	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_py.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_py.dir/build
 .PHONY : mavros_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/robot_localization_generate_messages_nodejs.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/robot_localization_generate_messages_nodejs.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/robot_localization_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-robot_localization_generate_messages_nodejs: summit_xl_common/summit_xl_localization/CMakeFiles/robot_localization_generate_messages_nodejs.dir/rule
-
-.PHONY : robot_localization_generate_messages_nodejs
-
-# fast build rule for target.
-robot_localization_generate_messages_nodejs/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/robot_localization_generate_messages_nodejs.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/robot_localization_generate_messages_nodejs.dir/build
-.PHONY : robot_localization_generate_messages_nodejs/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-uuid_msgs_generate_messages_lisp: summit_xl_common/summit_xl_localization/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : uuid_msgs_generate_messages_lisp
-
-# fast build rule for target.
-uuid_msgs_generate_messages_lisp/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/build
-.PHONY : uuid_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-geographic_msgs_generate_messages_cpp: summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : geographic_msgs_generate_messages_cpp
-
-# fast build rule for target.
-geographic_msgs_generate_messages_cpp/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/build
-.PHONY : geographic_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_nodejs: summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : tf2_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-tf2_msgs_generate_messages_nodejs/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/build
-.PHONY : tf2_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/robot_localization_generate_messages_py.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/robot_localization_generate_messages_py.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/robot_localization_generate_messages_py.dir/rule
-
-# Convenience name for target.
-robot_localization_generate_messages_py: summit_xl_common/summit_xl_localization/CMakeFiles/robot_localization_generate_messages_py.dir/rule
-
-.PHONY : robot_localization_generate_messages_py
-
-# fast build rule for target.
-robot_localization_generate_messages_py/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/robot_localization_generate_messages_py.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/robot_localization_generate_messages_py.dir/build
-.PHONY : robot_localization_generate_messages_py/fast
 
 # Convenience name for target.
 summit_xl_common/summit_xl_localization/CMakeFiles/uuid_msgs_generate_messages_eus.dir/rule:
@@ -543,6 +348,66 @@ uuid_msgs_generate_messages_eus/fast:
 .PHONY : uuid_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
+summit_xl_common/summit_xl_localization/CMakeFiles/robot_localization_generate_messages_nodejs.dir/rule:
+	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/robot_localization_generate_messages_nodejs.dir/rule
+.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/robot_localization_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+robot_localization_generate_messages_nodejs: summit_xl_common/summit_xl_localization/CMakeFiles/robot_localization_generate_messages_nodejs.dir/rule
+
+.PHONY : robot_localization_generate_messages_nodejs
+
+# fast build rule for target.
+robot_localization_generate_messages_nodejs/fast:
+	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/robot_localization_generate_messages_nodejs.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/robot_localization_generate_messages_nodejs.dir/build
+.PHONY : robot_localization_generate_messages_nodejs/fast
+
+# Convenience name for target.
+summit_xl_common/summit_xl_localization/CMakeFiles/robot_localization_generate_messages_py.dir/rule:
+	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/robot_localization_generate_messages_py.dir/rule
+.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/robot_localization_generate_messages_py.dir/rule
+
+# Convenience name for target.
+robot_localization_generate_messages_py: summit_xl_common/summit_xl_localization/CMakeFiles/robot_localization_generate_messages_py.dir/rule
+
+.PHONY : robot_localization_generate_messages_py
+
+# fast build rule for target.
+robot_localization_generate_messages_py/fast:
+	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/robot_localization_generate_messages_py.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/robot_localization_generate_messages_py.dir/build
+.PHONY : robot_localization_generate_messages_py/fast
+
+# Convenience name for target.
+summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/rule:
+	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/rule
+.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+geographic_msgs_generate_messages_cpp: summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : geographic_msgs_generate_messages_cpp
+
+# fast build rule for target.
+geographic_msgs_generate_messages_cpp/fast:
+	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_cpp.dir/build
+.PHONY : geographic_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_py.dir/rule:
+	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_py.dir/rule
+.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+geographic_msgs_generate_messages_py: summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_py.dir/rule
+
+.PHONY : geographic_msgs_generate_messages_py
+
+# fast build rule for target.
+geographic_msgs_generate_messages_py/fast:
+	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_py.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_py.dir/build
+.PHONY : geographic_msgs_generate_messages_py/fast
+
+# Convenience name for target.
 summit_xl_common/summit_xl_localization/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/rule:
 	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/rule
 .PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/rule
@@ -556,21 +421,6 @@ uuid_msgs_generate_messages_cpp: summit_xl_common/summit_xl_localization/CMakeFi
 uuid_msgs_generate_messages_cpp/fast:
 	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/uuid_msgs_generate_messages_cpp.dir/build
 .PHONY : uuid_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_py: summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_py
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_py/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_py/fast
 
 # Convenience name for target.
 summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_eus.dir/rule:
@@ -588,21 +438,6 @@ geographic_msgs_generate_messages_eus/fast:
 .PHONY : geographic_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_py.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_py.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_py: summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_py.dir/rule
-
-.PHONY : std_srvs_generate_messages_py
-
-# fast build rule for target.
-std_srvs_generate_messages_py/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_py.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_py.dir/build
-.PHONY : std_srvs_generate_messages_py/fast
-
-# Convenience name for target.
 summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/rule:
 	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/rule
 .PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/rule
@@ -616,21 +451,6 @@ geographic_msgs_generate_messages_lisp: summit_xl_common/summit_xl_localization/
 geographic_msgs_generate_messages_lisp/fast:
 	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_lisp.dir/build
 .PHONY : geographic_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_srvs_generate_messages_lisp: summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
-
-.PHONY : std_srvs_generate_messages_lisp
-
-# fast build rule for target.
-std_srvs_generate_messages_lisp/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
-.PHONY : std_srvs_generate_messages_lisp/fast
 
 # Convenience name for target.
 summit_xl_common/summit_xl_localization/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/rule:
@@ -648,379 +468,19 @@ geographic_msgs_generate_messages_nodejs/fast:
 .PHONY : geographic_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+summit_xl_common/summit_xl_localization/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/rule:
+	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/rule
+.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-tf2_msgs_generate_messages_cpp: summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/rule
+uuid_msgs_generate_messages_lisp: summit_xl_common/summit_xl_localization/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/rule
 
-.PHONY : tf2_msgs_generate_messages_cpp
+.PHONY : uuid_msgs_generate_messages_lisp
 
 # fast build rule for target.
-tf2_msgs_generate_messages_cpp/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_cpp.dir/build
-.PHONY : tf2_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_lisp: summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_lisp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_lisp/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_cpp.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_cpp: summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_cpp.dir/rule
-
-.PHONY : actionlib_generate_messages_cpp
-
-# fast build rule for target.
-actionlib_generate_messages_cpp/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_cpp.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_cpp.dir/build
-.PHONY : actionlib_generate_messages_cpp/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_eus.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_eus.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_eus: summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_eus.dir/rule
-
-.PHONY : actionlib_generate_messages_eus
-
-# fast build rule for target.
-actionlib_generate_messages_eus/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_eus.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_eus.dir/build
-.PHONY : actionlib_generate_messages_eus/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_lisp.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_lisp: summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_lisp.dir/rule
-
-.PHONY : actionlib_generate_messages_lisp
-
-# fast build rule for target.
-actionlib_generate_messages_lisp/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_lisp.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_lisp.dir/build
-.PHONY : actionlib_generate_messages_lisp/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_nodejs: summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_nodejs.dir/rule
-
-.PHONY : actionlib_generate_messages_nodejs
-
-# fast build rule for target.
-actionlib_generate_messages_nodejs/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_nodejs.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_nodejs.dir/build
-.PHONY : actionlib_generate_messages_nodejs/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_nodejs: summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_nodejs
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_nodejs/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-tf2_msgs_generate_messages_py: summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_py.dir/rule
-
-.PHONY : tf2_msgs_generate_messages_py
-
-# fast build rule for target.
-tf2_msgs_generate_messages_py/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_py.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/tf2_msgs_generate_messages_py.dir/build
-.PHONY : tf2_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-mavros_msgs_generate_messages_cpp: summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : mavros_msgs_generate_messages_cpp
-
-# fast build rule for target.
-mavros_msgs_generate_messages_cpp/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/build
-.PHONY : mavros_msgs_generate_messages_cpp/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_py.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_py.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_py.dir/rule
-
-# Convenience name for target.
-actionlib_generate_messages_py: summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_py.dir/rule
-
-.PHONY : actionlib_generate_messages_py
-
-# fast build rule for target.
-actionlib_generate_messages_py/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_py.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/actionlib_generate_messages_py.dir/build
-.PHONY : actionlib_generate_messages_py/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_cpp.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_cpp.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-tf_generate_messages_cpp: summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_cpp.dir/rule
-
-.PHONY : tf_generate_messages_cpp
-
-# fast build rule for target.
-tf_generate_messages_cpp/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_cpp.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_cpp.dir/build
-.PHONY : tf_generate_messages_cpp/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-nav_msgs_generate_messages_py: summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
-
-.PHONY : nav_msgs_generate_messages_py
-
-# fast build rule for target.
-nav_msgs_generate_messages_py/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/nav_msgs_generate_messages_py.dir/build
-.PHONY : nav_msgs_generate_messages_py/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_lisp.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_lisp.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-tf_generate_messages_lisp: summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_lisp.dir/rule
-
-.PHONY : tf_generate_messages_lisp
-
-# fast build rule for target.
-tf_generate_messages_lisp/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_lisp.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_lisp.dir/build
-.PHONY : tf_generate_messages_lisp/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-mavros_msgs_generate_messages_lisp: summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : mavros_msgs_generate_messages_lisp
-
-# fast build rule for target.
-mavros_msgs_generate_messages_lisp/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_lisp.dir/build
-.PHONY : mavros_msgs_generate_messages_lisp/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_cpp: summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_cpp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_cpp/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_eus.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-topic_tools_generate_messages_eus: summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_eus.dir/rule
-
-.PHONY : topic_tools_generate_messages_eus
-
-# fast build rule for target.
-topic_tools_generate_messages_eus/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_eus.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_eus.dir/build
-.PHONY : topic_tools_generate_messages_eus/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_nodejs.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_nodejs.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-tf_generate_messages_nodejs: summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_nodejs.dir/rule
-
-.PHONY : tf_generate_messages_nodejs
-
-# fast build rule for target.
-tf_generate_messages_nodejs/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_nodejs.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_nodejs.dir/build
-.PHONY : tf_generate_messages_nodejs/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_py.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_py.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_py.dir/rule
-
-# Convenience name for target.
-tf_generate_messages_py: summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_py.dir/rule
-
-.PHONY : tf_generate_messages_py
-
-# fast build rule for target.
-tf_generate_messages_py/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_py.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/tf_generate_messages_py.dir/build
-.PHONY : tf_generate_messages_py/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_py.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_py.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_py.dir/rule
-
-# Convenience name for target.
-topic_tools_generate_messages_py: summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_py.dir/rule
-
-.PHONY : topic_tools_generate_messages_py
-
-# fast build rule for target.
-topic_tools_generate_messages_py/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_py.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_py.dir/build
-.PHONY : topic_tools_generate_messages_py/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_eus.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_eus.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-mavros_msgs_generate_messages_eus: summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_eus.dir/rule
-
-.PHONY : mavros_msgs_generate_messages_eus
-
-# fast build rule for target.
-mavros_msgs_generate_messages_eus/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_eus.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_eus.dir/build
-.PHONY : mavros_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-mavros_msgs_generate_messages_nodejs: summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : mavros_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-mavros_msgs_generate_messages_nodejs/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/build
-.PHONY : mavros_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/amcl_gencfg.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/amcl_gencfg.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/amcl_gencfg.dir/rule
-
-# Convenience name for target.
-amcl_gencfg: summit_xl_common/summit_xl_localization/CMakeFiles/amcl_gencfg.dir/rule
-
-.PHONY : amcl_gencfg
-
-# fast build rule for target.
-amcl_gencfg/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/amcl_gencfg.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/amcl_gencfg.dir/build
-.PHONY : amcl_gencfg/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_eus: summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-
-.PHONY : dynamic_reconfigure_generate_messages_eus
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_eus/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_eus/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_gencfg: summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-
-.PHONY : dynamic_reconfigure_gencfg
-
-# fast build rule for target.
-dynamic_reconfigure_gencfg/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
-.PHONY : dynamic_reconfigure_gencfg/fast
-
-# Convenience name for target.
-summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f CMakeFiles/Makefile2 summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
-.PHONY : summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-topic_tools_generate_messages_cpp: summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_cpp.dir/rule
-
-.PHONY : topic_tools_generate_messages_cpp
-
-# fast build rule for target.
-topic_tools_generate_messages_cpp/fast:
-	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_cpp.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/topic_tools_generate_messages_cpp.dir/build
-.PHONY : topic_tools_generate_messages_cpp/fast
+uuid_msgs_generate_messages_lisp/fast:
+	cd /home/ahmemad/Stupid-Robotics/build && $(MAKE) -f summit_xl_common/summit_xl_localization/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/build.make summit_xl_common/summit_xl_localization/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/build
+.PHONY : uuid_msgs_generate_messages_lisp/fast
 
 # Help Target
 help:
@@ -1028,70 +488,34 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... install/strip"
+	@echo "... install/local"
 	@echo "... install"
 	@echo "... list_install_components"
-	@echo "... rebuild_cache"
-	@echo "... std_srvs_generate_messages_nodejs"
-	@echo "... std_srvs_generate_messages_eus"
-	@echo "... nav_msgs_generate_messages_nodejs"
-	@echo "... install/local"
-	@echo "... nav_msgs_generate_messages_eus"
-	@echo "... std_srvs_generate_messages_cpp"
-	@echo "... tf_generate_messages_eus"
-	@echo "... nav_msgs_generate_messages_lisp"
-	@echo "... topic_tools_generate_messages_lisp"
-	@echo "... nav_msgs_generate_messages_cpp"
+	@echo "... amcl_gencfg"
+	@echo "... mavros_msgs_generate_messages_nodejs"
+	@echo "... mavros_msgs_generate_messages_cpp"
+	@echo "... test"
 	@echo "... uuid_msgs_generate_messages_py"
+	@echo "... rebuild_cache"
+	@echo "... edit_cache"
+	@echo "... mavros_msgs_generate_messages_lisp"
 	@echo "... uuid_msgs_generate_messages_nodejs"
-	@echo "... tf2_msgs_generate_messages_eus"
-	@echo "... topic_tools_generate_messages_nodejs"
-	@echo "... install/strip"
 	@echo "... robot_localization_generate_messages_cpp"
 	@echo "... robot_localization_generate_messages_eus"
-	@echo "... geographic_msgs_generate_messages_py"
-	@echo "... robot_localization_generate_messages_lisp"
-	@echo "... tf2_msgs_generate_messages_lisp"
-	@echo "... mavros_msgs_generate_messages_py"
-	@echo "... robot_localization_generate_messages_nodejs"
-	@echo "... uuid_msgs_generate_messages_lisp"
-	@echo "... test"
-	@echo "... geographic_msgs_generate_messages_cpp"
-	@echo "... tf2_msgs_generate_messages_nodejs"
-	@echo "... robot_localization_generate_messages_py"
-	@echo "... uuid_msgs_generate_messages_eus"
-	@echo "... uuid_msgs_generate_messages_cpp"
-	@echo "... dynamic_reconfigure_generate_messages_py"
-	@echo "... geographic_msgs_generate_messages_eus"
-	@echo "... std_srvs_generate_messages_py"
-	@echo "... geographic_msgs_generate_messages_lisp"
-	@echo "... std_srvs_generate_messages_lisp"
-	@echo "... geographic_msgs_generate_messages_nodejs"
-	@echo "... tf2_msgs_generate_messages_cpp"
-	@echo "... dynamic_reconfigure_generate_messages_lisp"
-	@echo "... actionlib_generate_messages_cpp"
-	@echo "... actionlib_generate_messages_eus"
-	@echo "... actionlib_generate_messages_lisp"
-	@echo "... actionlib_generate_messages_nodejs"
-	@echo "... dynamic_reconfigure_generate_messages_nodejs"
-	@echo "... tf2_msgs_generate_messages_py"
-	@echo "... mavros_msgs_generate_messages_cpp"
-	@echo "... actionlib_generate_messages_py"
-	@echo "... tf_generate_messages_cpp"
-	@echo "... nav_msgs_generate_messages_py"
-	@echo "... tf_generate_messages_lisp"
-	@echo "... mavros_msgs_generate_messages_lisp"
-	@echo "... dynamic_reconfigure_generate_messages_cpp"
-	@echo "... topic_tools_generate_messages_eus"
-	@echo "... edit_cache"
-	@echo "... tf_generate_messages_nodejs"
-	@echo "... tf_generate_messages_py"
-	@echo "... topic_tools_generate_messages_py"
 	@echo "... mavros_msgs_generate_messages_eus"
-	@echo "... mavros_msgs_generate_messages_nodejs"
-	@echo "... amcl_gencfg"
-	@echo "... dynamic_reconfigure_generate_messages_eus"
-	@echo "... dynamic_reconfigure_gencfg"
-	@echo "... topic_tools_generate_messages_cpp"
+	@echo "... robot_localization_generate_messages_lisp"
+	@echo "... mavros_msgs_generate_messages_py"
+	@echo "... uuid_msgs_generate_messages_eus"
+	@echo "... robot_localization_generate_messages_nodejs"
+	@echo "... robot_localization_generate_messages_py"
+	@echo "... geographic_msgs_generate_messages_cpp"
+	@echo "... geographic_msgs_generate_messages_py"
+	@echo "... uuid_msgs_generate_messages_cpp"
+	@echo "... geographic_msgs_generate_messages_eus"
+	@echo "... geographic_msgs_generate_messages_lisp"
+	@echo "... geographic_msgs_generate_messages_nodejs"
+	@echo "... uuid_msgs_generate_messages_lisp"
 .PHONY : help
 
 
