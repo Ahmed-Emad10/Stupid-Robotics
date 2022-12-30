@@ -203,6 +203,13 @@
 /home/ahmemad/Stupid-Robotics/build/summit_xl_sim/summit_xl_sim/CMakeFiles/rebuild_cache.dir
 /home/ahmemad/Stupid-Robotics/build/summit_xl_sim/summit_xl_sim/CMakeFiles/edit_cache.dir
 /home/ahmemad/Stupid-Robotics/build/summit_xl_sim/summit_xl_sim/CMakeFiles/test.dir
+/home/ahmemad/Stupid-Robotics/build/project_reqs/CMakeFiles/install/strip.dir
+/home/ahmemad/Stupid-Robotics/build/project_reqs/CMakeFiles/install/local.dir
+/home/ahmemad/Stupid-Robotics/build/project_reqs/CMakeFiles/install.dir
+/home/ahmemad/Stupid-Robotics/build/project_reqs/CMakeFiles/list_install_components.dir
+/home/ahmemad/Stupid-Robotics/build/project_reqs/CMakeFiles/rebuild_cache.dir
+/home/ahmemad/Stupid-Robotics/build/project_reqs/CMakeFiles/edit_cache.dir
+/home/ahmemad/Stupid-Robotics/build/project_reqs/CMakeFiles/test.dir
 /home/ahmemad/Stupid-Robotics/build/summit_xl_sim/summit_xl_sim_bringup/CMakeFiles/install/strip.dir
 /home/ahmemad/Stupid-Robotics/build/summit_xl_sim/summit_xl_sim_bringup/CMakeFiles/install/local.dir
 /home/ahmemad/Stupid-Robotics/build/summit_xl_sim/summit_xl_sim_bringup/CMakeFiles/install.dir

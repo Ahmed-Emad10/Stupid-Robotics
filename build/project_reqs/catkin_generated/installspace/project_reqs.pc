@@ -1,0 +1,8 @@
+prefix=/home/ahmemad/Stupid-Robotics/install
+
+Name: project_reqs
+Description: Description of project_reqs
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
