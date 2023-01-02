@@ -36,25 +36,6 @@ def move(twist: Twist):
         rospy.loginfo('D key pressed')
         lin_speed = 0.0
         ang_vel = max(-1.0, ang_vel - 0.2)
-
-    # if two keys are pressed at the same time
-    # elif getkey() == 'w' and getkey() == 'a':
-    #     rospy.loginfo('W and A keys pressed')
-    #     lin_speed += 0.3
-    #     ang_vel = min(1.0, ang_vel + 0.2)
-    # elif getkey() == 'd' and getkey() == 'w':
-    #     rospy.loginfo('W and D keys pressed')
-    #     lin_speed += 0.3
-    #     ang_vel = max(-1.0, ang_vel - 0.2)
-    # elif getkey() == 's' and getkey() == 'a':
-    #     rospy.loginfo('S and A keys pressed')
-    #     lin_speed -= 0.3
-    #     ang_vel = min(1.0, ang_vel + 0.2)
-    # elif getkey() == 's' and getkey() == 'd':
-    #     rospy.loginfo('S and D keys pressed')
-    #     lin_speed -= 0.3
-    #     ang_vel = max(-1.0, ang_vel - 0.2)
-    # q key is pressed
     elif getkey() == 'q':
         # exit the program
         twist.linear.x = 0.0
@@ -97,7 +78,7 @@ if __name__ == '__main__':
             twist1 = Twist()
             twist1 = move(twist)
             pub.publish(twist1)
-            rospy.loginfo('Publishing twist: {}'.format(twist1))
+            rospy.loginfo('Linear x: {}\nAngiular z {}:'.format(twist1.linear.x,twist1.angular.z))
             rate.sleep()
 
         except rospy.ROSInterruptException:

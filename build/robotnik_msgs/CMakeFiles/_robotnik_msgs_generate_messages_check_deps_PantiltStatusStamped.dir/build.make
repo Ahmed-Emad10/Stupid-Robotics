@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ahmemad/Stupid-Robotics/build
 include robotnik_msgs/CMakeFiles/_robotnik_msgs_generate_messages_check_deps_PantiltStatusStamped.dir/progress.make
 
 robotnik_msgs/CMakeFiles/_robotnik_msgs_generate_messages_check_deps_PantiltStatusStamped:
-	cd /home/ahmemad/Stupid-Robotics/build/robotnik_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py robotnik_msgs /home/ahmemad/Stupid-Robotics/src/robotnik_msgs/msg/PantiltStatusStamped.msg std_msgs/Header:robotnik_msgs/PantiltStatus
+	cd /home/ahmemad/Stupid-Robotics/build/robotnik_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py robotnik_msgs /home/ahmemad/Stupid-Robotics/src/robotnik_msgs/msg/PantiltStatusStamped.msg robotnik_msgs/PantiltStatus:std_msgs/Header
 
 _robotnik_msgs_generate_messages_check_deps_PantiltStatusStamped: robotnik_msgs/CMakeFiles/_robotnik_msgs_generate_messages_check_deps_PantiltStatusStamped
 _robotnik_msgs_generate_messages_check_deps_PantiltStatusStamped: robotnik_msgs/CMakeFiles/_robotnik_msgs_generate_messages_check_deps_PantiltStatusStamped.dir/build.make
