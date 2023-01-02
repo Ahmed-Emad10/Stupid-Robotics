@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ahmemad/Stupid-Robotics/build
 include robotnik_msgs/CMakeFiles/_robotnik_msgs_generate_messages_check_deps_SafetyModuleStatus.dir/progress.make
 
 robotnik_msgs/CMakeFiles/_robotnik_msgs_generate_messages_check_deps_SafetyModuleStatus:
-	cd /home/ahmemad/Stupid-Robotics/build/robotnik_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py robotnik_msgs /home/ahmemad/Stupid-Robotics/src/robotnik_msgs/msg/SafetyModuleStatus.msg robotnik_msgs/LaserStatus:robotnik_msgs/LaserMode
+	cd /home/ahmemad/Stupid-Robotics/build/robotnik_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py robotnik_msgs /home/ahmemad/Stupid-Robotics/src/robotnik_msgs/msg/SafetyModuleStatus.msg robotnik_msgs/LaserMode:robotnik_msgs/LaserStatus
 
 _robotnik_msgs_generate_messages_check_deps_SafetyModuleStatus: robotnik_msgs/CMakeFiles/_robotnik_msgs_generate_messages_check_deps_SafetyModuleStatus
 _robotnik_msgs_generate_messages_check_deps_SafetyModuleStatus: robotnik_msgs/CMakeFiles/_robotnik_msgs_generate_messages_check_deps_SafetyModuleStatus.dir/build.make

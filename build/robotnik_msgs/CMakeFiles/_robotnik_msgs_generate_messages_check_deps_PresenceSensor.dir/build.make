@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/ahmemad/Stupid-Robotics/build
 include robotnik_msgs/CMakeFiles/_robotnik_msgs_generate_messages_check_deps_PresenceSensor.dir/progress.make
 
 robotnik_msgs/CMakeFiles/_robotnik_msgs_generate_messages_check_deps_PresenceSensor:
-	cd /home/ahmemad/Stupid-Robotics/build/robotnik_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py robotnik_msgs /home/ahmemad/Stupid-Robotics/src/robotnik_msgs/msg/PresenceSensor.msg std_msgs/Header:geometry_msgs/Pose:geometry_msgs/Quaternion:geometry_msgs/Point
+	cd /home/ahmemad/Stupid-Robotics/build/robotnik_msgs && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py robotnik_msgs /home/ahmemad/Stupid-Robotics/src/robotnik_msgs/msg/PresenceSensor.msg geometry_msgs/Pose:geometry_msgs/Point:geometry_msgs/Quaternion:std_msgs/Header
 
 _robotnik_msgs_generate_messages_check_deps_PresenceSensor: robotnik_msgs/CMakeFiles/_robotnik_msgs_generate_messages_check_deps_PresenceSensor
 _robotnik_msgs_generate_messages_check_deps_PresenceSensor: robotnik_msgs/CMakeFiles/_robotnik_msgs_generate_messages_check_deps_PresenceSensor.dir/build.make
