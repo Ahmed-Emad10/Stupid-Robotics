@@ -18,18 +18,24 @@ first =True
 
 def pose(vx, vy, init_theta, omega,stamp,obs):
     global x, y , theta, prev_t
+    # prediction step
+    # decompose the velocity vector to vx and vy (transform the velocity vector from the robot space to the map space)
     vm_x = vx*np.cos(init_theta) - vy*np.sin(init_theta)
     vm_y = vy*np.cos(init_theta) + vx*np.sin(init_theta)
     delta_t = stamp - prev_t
     prev_t = stamp
     delta_t = delta_t.to_sec()
+    # x_predicted, y_predicted = (x_prev, y_prev) + (vm_x, vm_y) * delta_t
     xp = x + delta_t * vm_x
     yp = y + delta_t * vm_y
+    # theta_predicted = theta_prev + angular_velocity * delta_t
     thetap = init_theta + delta_t * omega
+    # corretcion step
     k = 1
-    x = xp + k(obs.x-xp) 
-    y = yp + k(obs.y-yp)
-    theta = thetap
+    x = xp + k *(obs.x - xp) 
+    y = yp + k *(obs.y - yp)
+    #theta = thetap
+    theta = thetap + k *(init_theta-thetap)
     
     return x, y, theta
 
@@ -55,18 +61,26 @@ def hit_miss(robot_x, robot_y, robot_theta, angle_min, angle_increment, range_mi
 
         hits[end_y,end_x] = hits[end_y,end_x] + 10
 
+        # calculate the distance between the end point and the robot
         dx = end_x - robot_x_int
         dy = end_y - robot_y_int
         dist = np.sqrt(dx**2 + dy**2)
+        # divide the difference between the end point and the robot by the distance to get the step size
+        # supose we have the the robot at (0,0) and the end point at (4,3) 
+        # the distance is 5 and the difference is (dx = 4, dy = 3)
+        # to get the step size we divide the difference(dx, dy) by the distance 5 we got step size (dx = 4/5, dy = 3/5)
         dx/=dist
         dy/=dist
         pointx = np.arange(robot_x_int, end_x-dx, dx+0.001)
         pointy = np.arange(robot_y_int, end_y-dy, dy+0.001)
         min_len = min(len(pointx),len(pointy))
+        # truncate the arrays to the same length
         pointx = pointx[:min_len]
         pointy = pointy[:min_len]
+        # convert the arrays to int to use them as indexes
         pointx = pointx.astype(int)
         pointy = pointy.astype(int)
+        # update misses array
         misses[pointy,pointx] += 5
 
     map = hits / (hits + misses)
@@ -85,8 +99,8 @@ def callback(CustomMsg):
         theta = Yaw
         prev_t = sm_msg.header.stamp
         first = False
-    
-    x, y, thata = pose(CustomMsg.nm.twist.twist.linear.x,CustomMsg.nm.twist.twist.linear.y,Yaw,CustomMsg.nm.twist.twist.angular.z, sm_msg.header.stamp, nm_msg.position)
+    # pose function takes (x_velocity, y_velocity, theta with respect to robot, angular_velocity, time_stamp, observation)
+    x, y, thata = pose(CustomMsg.nm.twist.twist.linear.x, CustomMsg.nm.twist.twist.linear.y, Yaw, CustomMsg.nm.twist.twist.angular.z, sm_msg.header.stamp, nm_msg.position)
     map = hit_miss(x, y, thata, sm_msg.angle_min, sm_msg.angle_increment, sm_msg.range_min, sm_msg.range_max, sm_msg.ranges)
     
     occgrid = OccupancyGrid()
