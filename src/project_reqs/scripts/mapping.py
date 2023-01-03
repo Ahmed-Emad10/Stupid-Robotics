@@ -54,7 +54,7 @@ def hit_miss(robot_x, robot_y, robot_theta, angle_min, angle_increment, range_mi
         pointy = pointy[:min_len]
         pointx = pointx.astype(int)
         pointy = pointy.astype(int)
-        misses[pointy,pointx] += 5 
+        misses[pointy,pointx] += 5
 
     map = hits / (hits + misses)
     map = map * 100
