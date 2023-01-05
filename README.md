@@ -24,15 +24,15 @@ This project is divides into four requirements:
 ![](http://wiki.ros.org/custom/images/ros_org.png)
 
 ## 🔗 Dependencies <a name = "depend"></a>
-### [summit_xl_common](http://wiki.ros.org/summit_xl_common)</br>
+#### [summit_xl_common](http://wiki.ros.org/summit_xl_common)</br>
    - Launch files that launch the complete simulation of the robot.
-### [summit_xl_sim](http://wiki.ros.org/summit_xl_sim)</br>
+#### [summit_xl_sim](http://wiki.ros.org/summit_xl_sim)</br>
    - This package contains the different controllers and launch files for the SummitXL robot, shared for real robot and simulation.
-### [robotnik_msgs](http://wiki.ros.org/robotnik_msgs)</br>
+#### [robotnik_msgs](http://wiki.ros.org/robotnik_msgs)</br>
    - Contains common messages and services used by some Robotnik's packages.
-### [robotnik_sensors](http://wiki.ros.org/robotnik_sensors)</br>
+#### [robotnik_sensors](http://wiki.ros.org/robotnik_sensors)</br>
    - Contains Robotnik standard sensors description.
-### [ira_laser_tools](http://wiki.ros.org/ira_laser_tools)
+#### [ira_laser_tools](http://wiki.ros.org/ira_laser_tools)
    - Listening to different laser scan sources and merging them in a single scan or generating virtual laser scans.
 
 
