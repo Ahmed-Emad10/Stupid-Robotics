@@ -12,6 +12,7 @@
 - [Get Started](#Install) 
 - [How to Run](#run)
 - [Screenshots](#Screenshots)
+- [Demo](#demo)
 ## 📙 About <a name = "about"></a>
 This project aims to apply the concepts of cognitive robotics to implement a Mapping with known pose and Simultaneous Localization and Mapping(**SLAM**) algorithm, and then apply it on Gazebo and RViz simulation tools using a real-life robot model in a realistic environment from scratch.</br>
 This simulation is done on **SummitXL** robot in Willow garage which is one the most popular indoor simulation environments in Gazebo.</br>
@@ -80,16 +81,23 @@ source ~/.bashrc
 ```
 roslaunch summit_xl_sim_bringup summit_xls_complete.launch
 ``` 
-   - note: if an error occurred while launching the simulation remove the following two lines from this file *Stupid-Robotics/src/summit_xl_sim/summit_xl_gazebo/launch/summit_xl_one_robot.launch*
+   - note: if an error occurred while launching the simulation remove the following two lines from this file *Stupid-Robotics/src/summit_xl_sim/summit_xl_gazebo/launch/summit_xl_one_robot.launch* line 104 and 105 : 
       ```
       <arg name="arm_manufacturer" value="$(arg arm_manufacturer)"/>
       <arg name="arm_model" value="$(arg arm_model)"/>
       ```
+
+2. Control the robot using W, S, A, D and Q to quit :</br>
+   *do each step in a new terminal
+```
+roslaunch summit_xl_sim_bringup summit_xls_complete.launch
+``` 
 ```
 rosrun project_reqs control.py
 ```
 
-### to run second req
+3. Sensor Incorporating and Alignment. :</br>
+   *do each step in a new terminal
 ```
 roslaunch summit_xl_sim_bringup summit_xls_complete.launch
 ```
@@ -99,3 +107,41 @@ roslaunch ira_laser_tools laserscan_multi_merger.launch
 ```
 rosrun project_reqs sensor_incorporating_and_alignment.py
 ```
+
+4. Mapping with known pose :</br>
+*do each step in a new terminal
+```
+roslaunch summit_xl_sim_bringup summit_xls_complete.launch
+```
+```
+roslaunch ira_laser_tools laserscan_multi_merger.launch
+```
+```
+rosrun project_reqs sensor_incorporating_and_alignment.py
+```
+```
+rosrun project_reqs mapping.py
+```
+```
+rosrun project_reqs control.py
+```
+- You should go to RViz and click on Add then add new Map /map_topic  
+
+5. Simultaneous Localization and Mapping(**SLAM**) :</br>
+*do each step in a new terminal
+```
+roslaunch summit_xl_sim_bringup summit_xls_complete.launch
+```
+```
+roslaunch ira_laser_tools laserscan_multi_merger.launch
+```
+```
+rosrun project_reqs sensor_incorporating_and_alignment.py
+```
+```
+rosrun project_reqs slam.py
+```
+```
+rosrun project_reqs control.py
+```
+- You should go to RViz and click on Add then add new Map /slam_topic 
