@@ -18,9 +18,13 @@ This project aims to apply the concepts of cognitive robotics to implement a Map
 This simulation is done on **SummitXL** robot in Willow garage which is one the most popular indoor simulation environments in Gazebo.</br>
 This project is divides into four requirements:
 1. Control the robot using keyboard keys.
+   - control node to control the robot press W, A, S, D to move the robot and Q to exit
 2. Sensor Incorporating and Alignment.
+   - this to merge the two laser sensors of the robot front and rear this is done by rai_laser_tools package and also to merge with them the odometry sensor readings.
 3. Mapping with known pose.
+   - It's required to draw the map while knowing the robot pose you can move using the control module this is done using reflective map algorithm.
 4. Simultaneous Localization and Mapping(**SLAM**).
+   - It's required to draw the map without knowing the robot pose you can move using the control module also this is done using approximation and a small changes have been done on the third module.
 
 ## 💻 Technology <a name = "tech"></a>
 ![](http://wiki.ros.org/custom/images/ros_org.png)
@@ -96,7 +100,7 @@ roslaunch summit_xl_sim_bringup summit_xls_complete.launch
 rosrun project_reqs control.py
 ```
 
-3. Sensor Incorporating and Alignment. :</br>
+3. Sensor Incorporating and Alignment :</br>
    *do each step in a new terminal
 ```
 roslaunch summit_xl_sim_bringup summit_xls_complete.launch
@@ -145,3 +149,15 @@ rosrun project_reqs slam.py
 rosrun project_reqs control.py
 ```
 - You should go to RViz and click on Add then add new Map /slam_topic 
+
+## 📷 Screenshots <a name="Screenshots"></a>
+<div align="center">
+Environment
+<img src="screenshots/Environment.png" alt="Environment">
+Mapping
+<img src="screenshots/Mapping.png" alt="Mapping">
+SLAM
+<img src="screenshots/slam.png" alt="SLAM">
+</div>
+
+## 📷 Demo <a name="demo"></a>
