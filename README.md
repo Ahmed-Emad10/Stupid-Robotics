@@ -163,5 +163,5 @@ SLAM
 ## 📷 Demo <a name="demo"></a>
 
 
-![Demo](https://user-images.githubusercontent.com/65132004/210863205-5f44352f-f1bc-4b7c-8603-87d0d6ec7de1.mp4)
+[Demo](https://user-images.githubusercontent.com/65132004/210863205-5f44352f-f1bc-4b7c-8603-87d0d6ec7de1.mp4)
 
