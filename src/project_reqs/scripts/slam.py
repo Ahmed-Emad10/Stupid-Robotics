@@ -34,8 +34,7 @@ def pose(vx, vy, init_theta, omega,stamp,obs):
     k = 1
     x = xp + k *(obs.x - xp) 
     y = yp + k *(obs.y - yp)
-    #theta = thetap
-    theta = thetap + k *(init_theta-thetap)
+    theta = thetap + k *(init_theta - thetap)
     
     return x, y, theta
 

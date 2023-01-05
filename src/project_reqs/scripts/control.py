@@ -56,10 +56,6 @@ def move(twist: Twist):
     elif getkey() == 'q':
         # exit the program
         twist.linear.x = 0.0
-        # twist.linear.y = 0.0
-        # twist.linear.z = 0.0
-        # twist.angular.x = 0.0
-        # twist.angular.y = 0.0
         twist.angular.z = 0.0
         rospy.loginfo('Q key pressed')
         rospy.signal_shutdown('Q key pressed')
@@ -69,10 +65,6 @@ def move(twist: Twist):
             lin_speed = max(0.0, lin_speed - 1.0) 
         elif lin_speed < 0.0:
             lin_speed = min(0.0, lin_speed + 1.0)
-        # twist.linear.y = 0.0
-        # twist.linear.z = 0.0
-        # twist.angular.x = 0.0
-        # twist.angular.y = 0.0
         if ang_vel > 0.0:
             ang_vel = max(0.0, ang_vel - 0.5)
         elif ang_vel < 0.0:
